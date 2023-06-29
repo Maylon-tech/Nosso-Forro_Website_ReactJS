@@ -1,15 +1,20 @@
-
-import './App.css'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
+import GlobalStyles from './styles/GlobalStyles'
+import Home from './pages/Home/Home'
 
 function App() {
 
   return (
-    <>  
+    <Router>  
         <Header />
-        <Hero />     
-    </>
+        <GlobalStyles />
+
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+        </Routes>
+      
+    </Router>
   )
 }
 
